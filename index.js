@@ -1,4 +1,7 @@
 import {uuid} from "./commons";
 import {randomFlow} from "./math";
+import {dateFormat} from "./dateUtil";
 
-export {uuid, randomFlow}
+export default {uuid, randomFlow, dateFormat}
+
+export {uuid, randomFlow, dateFormat}
