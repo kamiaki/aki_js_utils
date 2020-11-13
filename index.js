@@ -1,7 +1,7 @@
 import {uuid} from "./commons";
 import {randomFlow} from "./math";
-import {dateFormat} from "./dateUtil";
+import {dateFormat, minToHour, hourToMin} from "./dateUtil";
 
-export default {uuid, randomFlow, dateFormat}
+export default {uuid, randomFlow, dateFormat, minToHour, hourToMin}
 
-export {uuid, randomFlow, dateFormat}
+export {uuid, randomFlow, dateFormat, minToHour, hourToMin}
