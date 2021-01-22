@@ -98,9 +98,7 @@ const minToHour = (str) => {
     if (str !== "0" && str !== "" && str !== null) {
         return ((Math.floor(str / 60)).toString().length < 2 ? "0" + (Math.floor(str / 60)).toString() :
             (Math.floor(str / 60)).toString()) + ":" + ((str % 60).toString().length < 2 ? "0" + (str % 60).toString() : (str % 60).toString());
-    }
-    else
-    {
+    } else {
         return "";
     }
 }
@@ -112,13 +110,25 @@ const hourToMin = (str) => {
     if (arrminutes.length == 2) {
         var minutes = parseInt(arrminutes[0]) * 60 + parseInt(arrminutes[1]);
         return minutes;
-    }
-    else {
+    } else {
         return 0;
     }
 }
 
+/**
+ * 一天的开始
+ */
+const startOfDay = () => {
+    let daySart = new Date(new Date(new Date().toLocaleDateString()).getTime())
+    return daySart
+}
 
-
+/**
+ * 一天的结束
+ */
+const startOfDay = () => {
+    let dayEnd = new Date(new Date(new Date().toLocaleDateString()).getTime() + 24 * 60 * 60 * 1000 - 1)
+    return dayEnd
+}
 
 export {dateFormat, minToHour, hourToMin}
