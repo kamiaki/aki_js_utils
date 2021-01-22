@@ -126,9 +126,9 @@ const startOfDay = () => {
 /**
  * 一天的结束
  */
-const startOfDay = () => {
+const endOfDay = () => {
     let dayEnd = new Date(new Date(new Date().toLocaleDateString()).getTime() + 24 * 60 * 60 * 1000 - 1)
     return dayEnd
 }
 
-export {dateFormat, minToHour, hourToMin}
+export {dateFormat, minToHour, hourToMin, startOfDay, endOfDay}
