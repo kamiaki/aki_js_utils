@@ -41,5 +41,4 @@ const clone = obj => {
     let cloneObj = JSON.parse(JSON.stringify(obj))
     return cloneObj
 }
-export default {uuid, sleep, objToUrl, clone}
 export {uuid, sleep, objToUrl, clone}
