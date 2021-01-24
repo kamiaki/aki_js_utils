@@ -1,6 +1,6 @@
 {
   "name": "aki_js_utils",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "王小秋的js工具包,欢迎使用 😀 增加了 分钟转小时 小时转分钟",
   "main": "index.js",
   "scripts": {

@@ -23,4 +23,23 @@ const sleep = numberMillis => {
         }
     }
 }
-export {uuid, sleep}
+
+// obj转url参数
+const objToUrl = obj => {
+    let arr = []
+    for (let i in obj) {
+        if (obj.hasOwnProperty(i)) {
+            arr.push(encodeURIComponent(i) + '=' + encodeURIComponent(obj[i]))
+        }
+    }
+    let url = arr.join('&')
+    return url
+}
+
+// 深拷贝
+const clone = obj => {
+    let cloneObj = JSON.parse(JSON.stringify(obj))
+    return cloneObj
+}
+export default {uuid, sleep, objToUrl, clone}
+export {uuid, sleep, objToUrl, clone}
