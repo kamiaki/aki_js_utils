@@ -1,5 +1,34 @@
 // 日期格式化 yyyy-MM-dd HH:mm:ss
 const dateFormat = (date, fmt) => {
+    // date校验
+    let iDate = null
+    if (typeof date === 'number') {
+        iDate = new Date(date)
+    } else if (typeof date === 'string') {
+        date = date.replace(/-/g, '/')
+        if (date.indexOf('T') > -1) {
+            let dotIndex = date.indexOf('.')
+            date = date.substr(0, dotIndex)
+            date = date.replace('T', ' ')
+            date = new Date(date).getTime()
+        }
+
+        if (!isNaN(Number(date))) {
+            date = Number(date)
+        }
+
+        iDate = new Date(date)
+    } else if (date instanceof Date) {
+        iDate = date
+    } else {
+        return false
+    }
+    date = iDate
+    // fmt校验
+    if (!fmt) {
+        fmt = 'yyyy-MM-dd hh:mm:ss'
+    }
+    // 转换
     var o = {
         'M+': date.getMonth() + 1, // 月份
         'd+': date.getDate(), // 日
