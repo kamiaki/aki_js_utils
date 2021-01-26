@@ -1,6 +1,6 @@
 {
   "name": "aki_js_utils",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "王小秋的js工具包,欢迎使用 😀 https://github.com/kamiaki/aki_js_utils",
   "main": "index.js",
   "scripts": {

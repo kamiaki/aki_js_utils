@@ -30,7 +30,7 @@ const objToUrl = obj => {
     for (let i in obj) {
         if (obj.hasOwnProperty(i)) {
             let value = encodeURIComponent(obj[i])
-            if (value || value === 'undefined') value = ''
+            if (value === null || value === 'undefined') value = ''
             arr.push(encodeURIComponent(i) + '=' + value)
         }
     }
