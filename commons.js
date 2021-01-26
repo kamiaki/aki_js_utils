@@ -29,7 +29,9 @@ const objToUrl = obj => {
     let arr = []
     for (let i in obj) {
         if (obj.hasOwnProperty(i)) {
-            arr.push(encodeURIComponent(i) + '=' + encodeURIComponent(obj[i]))
+            let value = encodeURIComponent(obj[i])
+            if (value || value === 'undefined') value = ''
+            arr.push(encodeURIComponent(i) + '=' + value)
         }
     }
     let url = arr.join('&')
