@@ -26,7 +26,7 @@ const dateFormat = (date, fmt) => {
     date = iDate
     // fmt校验
     if (!fmt) {
-        fmt = 'yyyy-MM-dd hh:mm:ss'
+        fmt = 'yyyy-MM-dd HH:mm:ss'
     }
     // 转换
     var o = {
