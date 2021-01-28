@@ -8,6 +8,7 @@ const floorTo10Minutes = (date) => {
     date.setMinutes(date.getMinutes() - date.getMinutes() % 10)
     date.setSeconds(0)
     date.setMilliseconds(0)
+    return new Date(date)
 }
 
 const changeDate = (date, type, number) => {

@@ -90,6 +90,7 @@ const floorTo10Minutes = (date) => {
     date.setMinutes(date.getMinutes() - date.getMinutes() % 10)
     date.setSeconds(0)
     date.setMilliseconds(0)
+    return new Date(date)
 }
 
 /**
@@ -114,6 +115,7 @@ const changeDate = (date, type, number) => {
     } else if ('S' === type) {
         date.setMilliseconds(date.getMilliseconds() + number)
     }
+    return new Date(date)
 }
 
 export {floorTo10Minutes, changeDate, dateFormat, minToHour, hourToMin, startOfDay, endOfDay}
