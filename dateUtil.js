@@ -132,4 +132,4 @@ const changeDate = (date, type, number) => {
     return newDate
 }
 
-export {floorTo10Minutes, changeDate, dateFormat, minToHour, hourToMin, startOfDay, endOfDay}
+export {floorTo60Minutes, floorTo10Minutes, changeDate, dateFormat, minToHour, hourToMin, startOfDay, endOfDay}

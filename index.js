@@ -1,6 +1,6 @@
 import {uuid, sleep, objToUrl, clone} from "./commons";
 import {randomFlow} from "./math";
-import {floorTo10Minutes, changeDate, dateFormat, minToHour, hourToMin, startOfDay, endOfDay} from "./dateUtil";
+import {floorTo60Minutes, floorTo10Minutes, changeDate, dateFormat, minToHour, hourToMin, startOfDay, endOfDay} from "./dateUtil";
 
 export default {
     uuid,
@@ -8,6 +8,7 @@ export default {
     objToUrl,
     clone,
     randomFlow,
+    floorTo60Minutes,
     floorTo10Minutes,
     changeDate,
     dateFormat,
@@ -23,6 +24,7 @@ export {
     objToUrl,
     clone,
     randomFlow,
+    floorTo60Minutes,
     floorTo10Minutes,
     changeDate,
     dateFormat,
