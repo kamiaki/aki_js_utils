@@ -83,6 +83,18 @@ const endOfDay = () => {
 }
 
 /**
+ * 设置日期向下取整到整点
+ * @param date
+ */
+const floorTo10Minutes = (date) => {
+    let newDate = new Date(date)
+    newDate.setMinutes(0)
+    newDate.setSeconds(0)
+    newDate.setMilliseconds(0)
+    return newDate
+}
+
+/**
  * 设置日期向下取整到10分钟
  * @param date
  */

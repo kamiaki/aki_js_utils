@@ -1,11 +1,15 @@
 let sdtime1 = new Date('2018-03-22 16:34:55')
 
 const floorTo10Minutes = (date) => {
-    date.setMinutes(date.getMinutes() - date.getMinutes() % 10)
+    date.setMinutes(0)
     date.setSeconds(0)
     date.setMilliseconds(0)
     return new Date(date)
 }
+
+let date = new Date('2018-03-22 012:34:55')
+console.info(date)
+console.info(floorTo10Minutes(date))
 
 const changeDate = (date, type, number) => {
     let newDate = new Date(date)
