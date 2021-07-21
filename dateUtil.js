@@ -107,6 +107,18 @@ const floorTo10Minutes = (date) => {
 }
 
 /**
+ * 设置日期向下取整到 x 分钟
+ * @param date
+ */
+const floorToXMinutes = (date, x) => {
+    let newDate = new Date(date)
+    newDate.setMinutes(newDate.getMinutes() - newDate.getMinutes() % x)
+    newDate.setSeconds(0)
+    newDate.setMilliseconds(0)
+    return newDate
+}
+
+/**
  * 设置日期 加减 年月日时分秒毫秒
  * @param date
  * @param type
@@ -132,4 +144,4 @@ const changeDate = (date, type, number) => {
     return newDate
 }
 
-export {floorTo60Minutes, floorTo10Minutes, changeDate, dateFormat, minToHour, hourToMin, startOfDay, endOfDay}
+export {floorToXMinutes, floorTo60Minutes, floorTo10Minutes, changeDate, dateFormat, minToHour, hourToMin, startOfDay, endOfDay}
