@@ -70,7 +70,7 @@ let splitArray = (arr, size) => { // size=5，要分割的长度
  * @param charSet
  * @returns {string}
  */
-function randomString(len, charSet) {
+const randomString = (len, charSet) => {
     charSet = charSet || 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let randomString = '';
     for (let i = 0; i < len; i++) {
